@@ -1,6 +1,8 @@
 @import '../../../sass/variables.scss';
 
-
-p {
-    color: $primary-color;
+.promo-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

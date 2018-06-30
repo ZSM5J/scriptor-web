@@ -1,10 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import './variables';
 
+
+// reset css
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 a:hover , a {
@@ -36,3 +39,4 @@ button:active,
 button:focus {
     outline: none;
 }
+// reset css
