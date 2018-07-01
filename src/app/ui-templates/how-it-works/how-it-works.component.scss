@@ -2,9 +2,10 @@
 
 
 .how-it-works__title {
-    font-size: 4vw;
+    font-size: 3vw;
     text-transform: uppercase;
-    color: #20515b;
+    color: $primary-color;
+    margin-top: 15px;
 }
 
 .how-it-works {
@@ -31,13 +32,13 @@
     padding: 30px;
 }
 
-    .test {
-        font-size: 144px;
-        height: 144px;
-        width: 144px;
-        line-height: 144px;
-        color: #20515b;
-    }
+.how-it-works__steps__step__image__icon {
+    font-size: 144px;
+    height: 144px;
+    width: 144px;
+    line-height: 144px;
+    color: $primary-color;
+}
 
 .how-it-works__steps__step__text {
     width: 100%;
@@ -47,8 +48,23 @@
 
 
 @media (max-width: 920px) { 
+    .how-it-works__title {
+        font-size: 4vw;
+    }
     .how-it-works__steps {
         flex-direction: column;
         align-items: center;
+    }
+    .how-it-works__steps {
+        margin-top: 5px;
+    }
+    .how-it-works__steps__step__image{
+        padding: 5px;
+    }
+}
+
+@media (max-width: 550px) { 
+    .how-it-works__title {
+        font-size: 6vw;
     }
 }
