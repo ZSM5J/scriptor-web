@@ -27,6 +27,15 @@
     cursor: pointer;
 }
 
+@media (max-width: 450px) {
+    .promo-menu__logo__item {
+        display: none;
+    }
+    .language-text {
+        display: none;
+    } 
+}
+
 .promo-menu__logo__item:hover {
     animation-name: logo;
     animation-duration: 0.4s;
@@ -93,3 +102,20 @@
     50% {transform: translate(5px,0);}
     0% {transform: translate(0px,0);}
 }
+
+
+.promo-menu__right-bar__item__sub-menu {
+    margin-top: 3px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+}
+.no-left-margin {
+    margin-left: 0;
+}
+
+.no-padding {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+

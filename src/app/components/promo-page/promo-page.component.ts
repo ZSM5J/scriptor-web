@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { LanguageService } from "../../services/language.service";
 
 @Component({
   selector: 'app-promo-page',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromoPageComponent implements OnInit {
 
-  constructor() { }
+  @HostListener('window:resize', ['$event'])
+    onResize(event) {
+      if (this.languageService.showSelect) {
+        this.languageService.showSelect = false;
+      } 
+    }
+
+  constructor(private languageService: LanguageService) { }
 
   ngOnInit() {
+  }
+
+  closeModal() {
+    if (this.languageService.showSelect) {
+      this.languageService.showSelect = false;
+    } 
   }
 
 }

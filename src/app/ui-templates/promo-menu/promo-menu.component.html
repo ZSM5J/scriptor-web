@@ -4,22 +4,31 @@
         <mat-icon svgIcon="logo" class="promo-menu__logo__item"></mat-icon>
     </div>
     <nav class="promo-menu__right-bar">
-        <div class="promo-menu__right-bar__item-wrap">
-            <a class="promo-menu__right-bar__item">
-              <div class="promo-menu__right-bar__item__text">english</div>
-              <div class="promo-menu__right-bar__item__icon"><mat-icon svgIcon="english" class="promo-menu__right-bar__item__icon_size"></mat-icon></div>
-            </a>
-        </div>
+      
       <div class="promo-menu__right-bar__item-wrap">
         <a class="promo-menu__right-bar__item">
-          <div class="promo-menu__right-bar__item__text">BUY NOW</div>
+          <div class="promo-menu__right-bar__item__text">{{languageService.choosenLanguage.interface.menuBuy}}</div>
         </a>
       </div>
       <div class="promo-menu__right-bar__item-wrap">
         <a class="promo-menu__right-bar__item login-button">
-          <div class="promo-menu__right-bar__item__text">LOG IN</div>
+          <div class="promo-menu__right-bar__item__text">{{languageService.choosenLanguage.interface.menuLogIn}}</div>
           <div class="promo-menu__right-bar__item__icon login-icon"><mat-icon svgIcon="right-arrow" class="promo-menu__right-bar__item__icon_size"></mat-icon></div>
         </a>
+      </div>
+      <div class="promo-menu__right-bar__item-wrap">
+          <a class="promo-menu__right-bar__item" #language (click)="showSelect()">
+            <div class="promo-menu__right-bar__item__text language-text">{{languageService.choosenLanguage.title}}</div>
+            <div class="promo-menu__right-bar__item__icon"><mat-icon [svgIcon]="languageService.choosenLanguage.icon" class="promo-menu__right-bar__item__icon_size"></mat-icon></div>
+          </a>
+            <div class="promo-menu__right-bar__item__sub-menu" (click)="stopPropagation()" [ngStyle]="{'left': languageSelect.left,'top': languageSelect.top }" *ngIf="languageService.showSelect">
+                <div class="promo-menu__right-bar__item-wrap">
+                    <a class="promo-menu__right-bar__item no-left-margin no-padding" #language *ngFor="let lang of languageService.languageList; index as i" (click)="changeLanguage(i)">
+                      <div class="promo-menu__right-bar__item__text language-text">{{lang.title}}</div>
+                      <div class="promo-menu__right-bar__item__icon"><mat-icon [svgIcon]="lang.icon" class="promo-menu__right-bar__item__icon_size"></mat-icon></div>
+                    </a>
+                </div>
+            </div>
       </div>
     </nav>
   </div>

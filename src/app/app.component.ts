@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CustomIconsService } from './services/custom-icons.service';
+import { LanguageService } from "./services/language.service";
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,9 @@ import { CustomIconsService } from './services/custom-icons.service';
 })
 export class AppComponent {
 
-  constructor(private iconsService: CustomIconsService) {
+  constructor(private iconsService: CustomIconsService, private languageService: LanguageService) {
     this.iconsService.init();
+    this.languageService.init();
   }
 
 }
