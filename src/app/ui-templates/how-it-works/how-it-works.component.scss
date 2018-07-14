@@ -12,6 +12,8 @@
     width: 100%;
     max-width: 1280px;
     text-align: center;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #6a737b;
 }
 
 .how-it-works__steps {
@@ -43,7 +45,8 @@
 .how-it-works__steps__step__text {
     width: 100%;
     padding: 5px;
-    font-size: 1rem;
+    font-size: 20px;
+    color: $primary-color;
 }
 
 

@@ -25,6 +25,5 @@ export class LanguageService {
 
   init() {
     this.choosenLanguage = this.languageList[0];
-    console.log(this.choosenLanguage);
   }
 }

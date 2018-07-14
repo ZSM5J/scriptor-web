@@ -11,7 +11,7 @@
         </a>
       </div>
       <div class="promo-menu__right-bar__item-wrap">
-        <a class="promo-menu__right-bar__item login-button">
+        <a class="promo-menu__right-bar__item login-button" (click)="service.login()">
           <div class="promo-menu__right-bar__item__text">{{languageService.choosenLanguage.interface.menuLogIn}}</div>
           <div class="promo-menu__right-bar__item__icon login-icon"><mat-icon svgIcon="right-arrow" class="promo-menu__right-bar__item__icon_size"></mat-icon></div>
         </a>

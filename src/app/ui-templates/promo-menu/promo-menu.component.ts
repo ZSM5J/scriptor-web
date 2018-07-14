@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { LanguageService } from "../../services/language.service";
+import { ApiService } from "../../services/api.service";
 
 @Component({
   selector: 'app-promo-menu',
@@ -11,7 +12,11 @@ export class PromoMenuComponent implements OnInit {
   private languageSelect = {show: false, left: '0px', top: '0px'};
   @ViewChild('language') languageElement: ElementRef;
 
-  constructor(private languageService: LanguageService) { }
+  get service() {
+    return this.apiService;
+  }
+
+  constructor(private languageService: LanguageService, private apiService: ApiService) { }
 
   ngOnInit() {
   }
